@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Output</title>
+	<style>
+		#output {
+			font-size: 28px;
+			font-weight: bold;
+			font-style: italic;
+		}
+
+		#output.success {
+			color: green;
+		}
+
+		#output.error {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Output</h1>
+	<p>Model thinks this Android application as an: <span id="output">{{ output }}</span></p>
+
+	<h1>Extracted Permissions for prediction: </h1>
+    <table>
+      <tbody>
+        {% for permission in permissions %}
+          <tr>
+            <td>{{ permission }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</body>
+</html>

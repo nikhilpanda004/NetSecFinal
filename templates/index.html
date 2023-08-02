@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload XML File</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Upload Android Manifest File</h1>
+	  <label>We analyze the permissions listed in the Android Manifest file to conclude whether given file's android app is Malware or not</label>
+      <hr>
+      <form action="/analyze" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="xml-file">Select an Android Manifest XML file to upload:</label>
+          <input type="file" class="form-control-file" id="xml-file" name="xml-file" accept=".xml" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Analyze</button>
+      </form>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
